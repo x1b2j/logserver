@@ -1,0 +1,4 @@
+#!/bin/bash
+openssl req -new -newkey rsa:4096 -nodes -x509 -subj "/C=IN/ST=Andhra Pradesh/L=hyderabad/O=aasaanpay/CN=x1b2j/emailAddress=gauravrajput@aasaanpay.com" -keyout server.key  -out server.cert
+ip=`ifconfig eth0 | grep inet | cut -d':' -f2 | grep Bcast | cut -c1-10`
+echo `echo $ip $'\t'$HOSTNAME` >> /etc/hosts

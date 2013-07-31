@@ -1,0 +1,11 @@
+input{
+      lumberjack{
+		 port => 44444
+		 ssl_certificate => "/root/server.cert"
+		 ssl_key => "/root/server.key"
+		 type => "system_logs"
+      }
+}
+output{
+       elasticsearch{}
+}
